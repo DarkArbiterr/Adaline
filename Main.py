@@ -7,16 +7,16 @@ import numpy as np
 import tensorflow as tf
 from keras.datasets import mnist
 import matplotlib.pyplot as plt
-print("hej")
+
 adalines = [AdalineModel.Adaline(784), AdalineModel.Adaline(784), AdalineModel.Adaline(784), AdalineModel.Adaline(784), AdalineModel.Adaline(784), AdalineModel.Adaline(784), AdalineModel.Adaline(784), AdalineModel.Adaline(784), AdalineModel.Adaline(784), AdalineModel.Adaline(784)]
 
 def main():
+
     (x_train, y_train), (x_test, y_test) = mnist.load_data()
     xTrain = [np.ndarray.flatten(t) for t in x_train]
     yTrain = np.array(y_train)
     xTest = [np.ndarray.flatten(t) for t in x_test]
     yTest = np.array(y_test)
-    print("hej")
     dataX = np.empty([60000,784])
     newDataY = np.empty([60000])
     testDataX = np.empty([10000,784])
